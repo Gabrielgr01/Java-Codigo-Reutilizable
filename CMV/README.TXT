@@ -9,5 +9,5 @@ PURPOSE OF PROJECT: Plantilla CMV
 VERSION or DATE:
 HOW TO START THIS PROJECT: Utilice este código como plantilla para implementar el CMV.
 AUTHORS: Gabriel González
-USER INSTRUCTIONS: La clase Modelo ees donde estaría parte más densa del programa: 
+USER INSTRUCTIONS: La clase Modelo es donde estaría la parte más densa del programa: 
 las funciones, etc; pero en lugar de eso podrían usarse varias clases (modelos) también.
