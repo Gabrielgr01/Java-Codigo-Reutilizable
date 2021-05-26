@@ -1,5 +1,7 @@
+// .................... LIBRERIAS ....................
     import javax.swing.JOptionPane;
 
+// .................... FUNCIONES ....................
     public static int[] redimencioneArregloInt (int[] arregloOriginal, int elementoAgregar){
       int[] arregloNuevo = new int[arregloOriginal.length + 1]; // se crea el arreglo nuevo con un espacio más que el original
       for (int i = 0; i < arregloOriginal.length; i++){ //copia los elementos del arreglo original en el arreglo nuevo
