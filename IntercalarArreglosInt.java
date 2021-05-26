@@ -1,9 +1,12 @@
+// .................... LIBRERIAS ....................
     import javax.swing.JOptionPane;
 
+// .................... VARIABLES GLOBALES ....................
     private static int[] arreglo1;
     private static int[] arreglo2;
     private static int[] arreglo3;
     
+// .................... FUNCIONES ....................
     public static int[] instancieArreglo (int[] arreglo) {
         int tamañoAleatorio;
         int valorAleatorio;
@@ -83,6 +86,7 @@
         return arregloIntercalado;
     }
     
+// .................... MAIN ....................
     public static void main (String a[]) {
         arreglo1 = instancieArreglo(arreglo1);
         arreglo2 = instancieArreglo(arreglo2);
