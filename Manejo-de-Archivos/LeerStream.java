@@ -6,12 +6,12 @@ public class LeerStream {
         try{
             int stream;
             FileInputStream fi=new FileInputStream("datos.txt");
-            while ((stream = fi.read()) != -1){
+            while ((stream = fi.read()) != -1) {
                 System.out.print((char) stream);
             }
         }
         catch(Exception e){
-					System.out.print("Hubo un error leyendo el stream.");
-				}
+		System.out.print("Hubo un error leyendo el stream.");
+	}
     }
 }
