@@ -46,12 +46,13 @@ public class Archivo
         }
     }
     
-    public void writeToFile(String msg, String filePath){
+    public void writeToFile(String msg, String filePath, boolean append){
         /**
-         * Reescribe el contenido
+         * append == true : Agrega el contenido al final del txt
+         * append == false : Reescribe el contenido
          **/
         try{
-            FileWriter myWriter = new FileWriter(filePath);
+            FileWriter myWriter = new FileWriter(filePath, append);
             myWriter.write(msg);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -96,14 +97,15 @@ public class Archivo
         // Archivo archivo = new Archivo();
         
         // String fileData = "";
-        // archivo.deleteFile(path);
+        // //archivo.deleteFile(path);
         
         // archivo.createFile(path);
         // archivo.fileInformation(path);
         // fileData = archivo.readFromFile(path);
         // System.out.println(fileData);
         
-        // archivo.writeToFile("Hola mundo!", path);
+        // archivo.writeToFile("Hola mundo!", path, true);
+        // archivo.writeToFile("\n", path, true);
         // archivo.fileInformation(path);
         // fileData = archivo.readFromFile(path);
         // System.out.println(fileData);
