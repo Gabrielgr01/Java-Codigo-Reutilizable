@@ -19,6 +19,11 @@ import java.io.FileNotFoundException;
  */
 public class Archivo
 {
+    
+    /**
+     * Crea un archivo en al direccion especificada como parametro
+     * @param filePath = directorio del archivo (incuido el nombre)
+     */
     public void createFile (String filePath){
         try{
             File newFile = new File(filePath);
@@ -33,6 +38,10 @@ public class Archivo
         }
     }
     
+    /**
+     * Crea un archivo en al direccion especificada como parametro
+     * @param filePath = directorio del archivo (incuido el nombre)
+     */
     public void fileInformation(String filePath){
         File myFile = new File(filePath);
         if (myFile.exists()) {
@@ -46,11 +55,13 @@ public class Archivo
         }
     }
     
+    /**
+     * Agrega o reescribe un mensaje en un archivo
+     * @param msg = mensaje a escribir
+     * @param filePath = directorio del archivo (incuido el nombre)
+     * @param append = 'true' para agregar contenido al final del txt, 'false' para reescribir el contenido del txt
+     */
     public void writeToFile(String msg, String filePath, boolean append){
-        /**
-         * append == true : Agrega el contenido al final del txt
-         * append == false : Reescribe el contenido
-         **/
         try{
             FileWriter myWriter = new FileWriter(filePath, append);
             myWriter.write(msg);
@@ -62,6 +73,10 @@ public class Archivo
         }
     }
     
+    /**
+     * Lee el contenido del archivo especificado
+     * @param filePath = directorio del archivo (incuido el nombre)
+     */
     public String readFromFile(String filePath){
         String fileData = "";
         try{
@@ -79,6 +94,33 @@ public class Archivo
         return fileData;
     }
     
+    
+    /**
+     * Lee la linea especificada del archivo
+     * @param index = indice de la linea a leer
+     * @param filePath = directorio del archivo (incuido el nombre)
+     */
+    public String readLine(int index, String filePath){
+        String lineData = "";
+        try{
+            File myFile = new File(filePath);
+            Scanner myReader = new Scanner(myFile);
+            for(int i = 0; i < index; i++){
+                myReader.nextLine();
+            }
+            lineData = myReader.nextLine();
+            myReader.close();
+        } catch(FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return lineData;
+    }
+    
+    /**
+     * Elimina el archivo especificado
+     * @param filePath = directorio del archivo (incuido el nombre)
+     */
     public void deleteFile(String filePath){
         File myFile = new File(filePath);
         if (myFile.exists()) {
